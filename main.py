@@ -59,6 +59,7 @@ extension = getExtension(choice)
 
 # ask the user for the name of the file
 name = input("Etape 3 : Quel nom souhaitez-vous donner au fichier ? : ")
+# replace the spaces by underscores
 name = name.replace(" ", "_")
 
 # create the full name of the file
@@ -66,6 +67,11 @@ full_name = makeFullName(name, extension, getDate())
 
 # save the QR Code
 img_qr_big.save(f'./generated_qr_codes/{full_name}')
+
+# print the success message
+print("*" * 50)
+print(f"Félicitations! Le QR Code nommé {full_name} a bien été généré")
+print("*" * 50)
 
 
 
