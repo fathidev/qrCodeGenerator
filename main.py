@@ -32,3 +32,23 @@ qr_big = qrcode.QRCode(
     border=3
 )
 
+# print the welcome message
+print("*" * 50)
+print("Bienvenue dans le générateur de QR Code de Fathi !")
+print("*" * 50)
+
+# ask the user for the URL to insert in the QR Code
+data = input("Etape 1 : Saisissez l'URL à insérer dans le QR CODE : ")
+qr_big.add_data(data)
+qr_big.make()
+
+# create the QR Code image
+img_qr_big = qr_big.make_image(
+    fill_color = "blue", 
+    back_color = "white"
+).convert('RGB')
+
+# paste the logo in the middle of the QR Code
+pos = ((img_qr_big.size[0] - logo.size[0]) // 2, (img_qr_big.size[1] - logo.size[1]) // 2)
+
+
