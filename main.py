@@ -22,7 +22,7 @@ def makeFullName (name, extension, dateToday):
 # end of functions
 
 # open the logo and resize it
-logo = Image.open('./source_pictures/logo_instagram.png').resize((60, 60))
+logo = Image.open('./source_images/logo_instagram.png').resize((60, 60))
 
 # create the QR Code
 qr_big = qrcode.QRCode(
