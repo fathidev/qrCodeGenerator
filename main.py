@@ -7,7 +7,7 @@ def getDate ():
     dateToday = datetime.date.today()
     return dateToday
 
-def makeExtension(choice):
+def getExtension(choice):
     if choice == 1:
         return ".png"
     elif choice == 2:
@@ -54,7 +54,8 @@ img_qr_big.paste(logo, pos)
 
 # ask the user for the extension of the file
 choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. JPEG\nVotre choix : "))
-extension = makeExtension(choice)
+# get the extension
+extension = getExtension(choice)
 
 # ask the user for the name of the file
 name = input("Etape 3 : Quel nom souhaitez-vous donner au fichier ? : ")
