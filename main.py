@@ -20,3 +20,15 @@ def makeExtension(choice):
 def makeFullName (name, extension, dateToday):
     return f'{dateToday}_{name}{extension}'
 # end of functions
+
+# open the logo and resize it
+logo = Image.open('./source_pictures/logo_instagram.png').resize((60, 60))
+
+# create the QR Code
+qr_big = qrcode.QRCode(
+    version = 3,
+    error_correction=qrcode.constants.ERROR_CORRECT_H,
+    box_size=9,
+    border=3
+)
+
