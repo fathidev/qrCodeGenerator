@@ -64,7 +64,7 @@ name = name.replace(" ", "_")
 full_name = makeFullName(name, extension, getDate())
 
 # save the QR Code
-img_qr_big.save(f'./qrGenerated/{full_name}')
+img_qr_big.save(f'./generated_qr_codes/{full_name}')
 
 
 
