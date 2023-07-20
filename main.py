@@ -50,5 +50,10 @@ img_qr_big = qr_big.make_image(
 
 # paste the logo in the middle of the QR Code
 pos = ((img_qr_big.size[0] - logo.size[0]) // 2, (img_qr_big.size[1] - logo.size[1]) // 2)
+img_qr_big.paste(logo, pos)
+
+# ask the user for the extension of the file
+choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. JPEG\nVotre choix : "))
+extension = makeExtension(choice)
 
 
