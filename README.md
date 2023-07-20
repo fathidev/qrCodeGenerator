@@ -1,0 +1,1 @@
+# Application qui permet générer des QrCode en ligne de commande avec Python.
