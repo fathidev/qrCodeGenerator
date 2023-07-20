@@ -56,4 +56,16 @@ img_qr_big.paste(logo, pos)
 choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. JPEG\nVotre choix : "))
 extension = makeExtension(choice)
 
+# ask the user for the name of the file
+name = input("Etape 3 : Quel nom souhaitez-vous donner au fichier ? : ")
+name = name.replace(" ", "_")
+
+# create the full name of the file
+full_name = makeFullName(name, extension, getDate())
+
+# save the QR Code
+img_qr_big.save(f'./qrGenerated/{full_name}')
+
+
+
 
