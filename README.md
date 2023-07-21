@@ -25,4 +25,4 @@ from PIL import Image
 
 Veuillez noter que vous devez remplacer ./source_images/logo_instagram.png par le chemin d'accès de l'image de logo souhaitée. Assurez-vous également d'avoir les autorisations nécessaires pour créer des répertoires et des fichiers dans le répertoire de travail.
 
-Bonne génération de codes QR !
+Bonne génération de QR Codes !
