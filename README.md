@@ -8,12 +8,12 @@ pip install qrcode pillow
 
 ## Utilisation :
 Pour utiliser le Générateur de QR Code, suivez ces étapes :
-Lancez le script, il vous demandera d'entrer l'URL que vous souhaitez insérer dans le code QR.
-Après avoir saisi l'URL, l'application générera un code QR avec l'URL spécifiée et un logo personnalisé (logo Instagram dans cet exemple) placé au centre du code QR.
-Vous devrez ensuite choisir le format de l'image du code QR (PNG, JPG ou JPEG).
-Ensuite, fournissez un nom pour le fichier. L'application remplacera les espaces dans le nom par des traits de soulignement pour assurer un nom de fichier valide.
-Le code QR sera enregistré dans le répertoire generated_qr_codes avec le nom de fichier au format : AAAA-MM-JJ_nomdefichier.png (ou .jpg ou .jpeg, selon votre choix).
-Un message de réussite sera affiché, indiquant que le code QR a été généré avec succès.
+1.Lancez le script, il vous demandera d'entrer l'URL que vous souhaitez insérer dans le code QR.
+1.Après avoir saisi l'URL, l'application générera un code QR avec l'URL spécifiée et un logo personnalisé (logo Instagram dans cet exemple) placé au centre du code QR.
+1.Vous devrez ensuite choisir le format de l'image du code QR (PNG, JPG ou JPEG).
+1.Ensuite, fournissez un nom pour le fichier. L'application remplacera les espaces dans le nom par des traits de soulignement pour assurer un nom de fichier valide.
+1.Le code QR sera enregistré dans le répertoire generated_qr_codes avec le nom de fichier au format : AAAA-MM-JJ_nomdefichier.png (ou .jpg ou .jpeg, selon votre choix).
+1.Un message de réussite sera affiché, indiquant que le code QR a été généré avec succès.
 
 ## Prérequis :
     Python 3.x
