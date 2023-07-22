@@ -39,6 +39,8 @@ print("*" * 50)
 
 # ask the user for the URL to insert in the QR Code
 data = input("Etape 1 : Saisissez l'URL à insérer dans le QR CODE : ")
+data = data.replace(" ", "")
+print(data)
 qr_big.add_data(data)
 qr_big.make()
 
