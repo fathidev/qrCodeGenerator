@@ -13,7 +13,7 @@ def getExtension(choice):
     elif choice == 2:
         return ".jpg"
     elif choice == 3:
-        return ".jpeg"
+        return ".webp"
     else:
         return ".png"
     
@@ -53,7 +53,7 @@ pos = ((img_qr_big.size[0] - logo.size[0]) // 2, (img_qr_big.size[1] - logo.size
 img_qr_big.paste(logo, pos)
 
 # ask the user for the extension of the file
-choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. JPEG\nVotre choix : "))
+choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. WEBP\nVotre choix : "))
 # get the extension
 extension = getExtension(choice)
 
