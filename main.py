@@ -39,8 +39,8 @@ print("*" * 50)
 
 # ask the user for the URL to insert in the QR Code
 data = input("Etape 1 : Saisissez l'URL à insérer dans le QR CODE : ")
+# remove the spaces
 data = data.replace(" ", "")
-print(data)
 qr_big.add_data(data)
 qr_big.make()
 
@@ -55,7 +55,15 @@ pos = ((img_qr_big.size[0] - logo.size[0]) // 2, (img_qr_big.size[1] - logo.size
 img_qr_big.paste(logo, pos)
 
 # ask the user for the extension of the file
-choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. WEBP\nVotre choix : "))
+while True:
+    try:
+        choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. WEBP\nVotre choix : "))
+        if choice < 1 or choice > 3:
+            raise ValueError
+        break
+    except ValueError:
+        print("Veuillez choisir un chiffre entre 1 et 3")
+
 # get the extension
 extension = getExtension(choice)
 
