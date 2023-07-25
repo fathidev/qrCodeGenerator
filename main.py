@@ -12,10 +12,9 @@ def getExtension(choice):
         return ".png"
     elif choice == 2:
         return ".jpg"
-    elif choice == 3:
+    else :
         return ".webp"
-    else:
-        return ".png"
+
     
 def makeFullName (name, extension, dateToday):
     return f'{dateToday}_{name}{extension}'
@@ -46,7 +45,7 @@ qr_big.make()
 
 # create the QR Code image
 img_qr_big = qr_big.make_image(
-    fill_color = "blue", 
+    fill_color = "black", 
     back_color = "white"
 ).convert('RGB')
 
