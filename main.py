@@ -12,10 +12,9 @@ def getExtension(choice):
         return ".png"
     elif choice == 2:
         return ".jpg"
-    elif choice == 3:
-        return ".jpeg"
-    else:
-        return ".png"
+    else :
+        return ".webp"
+
     
 def makeFullName (name, extension, dateToday):
     return f'{dateToday}_{name}{extension}'
@@ -40,12 +39,14 @@ print("*" * 50)
 
 # ask the user for the URL to insert in the QR Code
 data = input("Etape 1 : Saisissez l'URL à insérer dans le QR CODE : ")
+# remove the spaces
+data = data.replace(" ", "")
 qr_big.add_data(data)
 qr_big.make()
 
 # create the QR Code image
 img_qr_big = qr_big.make_image(
-    fill_color = "blue", 
+    fill_color = "black", 
     back_color = "white"
 ).convert('RGB')
 
@@ -54,7 +55,15 @@ pos = ((img_qr_big.size[0] - logo.size[0]) // 2, (img_qr_big.size[1] - logo.size
 img_qr_big.paste(logo, pos)
 
 # ask the user for the extension of the file
-choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. JPEG\nVotre choix : "))
+while True:
+    try:
+        choice = int(input("Etape 2 : Quel format souhaitez-vous pour le QR Code ?\n1. PNG\n2. JPG\n3. WEBP\nVotre choix : "))
+        if choice < 1 or choice > 3:
+            raise ValueError
+        break
+    except ValueError:
+        print("Veuillez choisir un chiffre entre 1 et 3")
+
 # get the extension
 extension = getExtension(choice)
 
